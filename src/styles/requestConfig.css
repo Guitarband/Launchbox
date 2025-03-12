@@ -1,0 +1,94 @@
+#configOptions{
+    padding: 5px 10px;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+#configOptions input{
+    display: none;
+}
+
+#configOptions label{
+    position: relative;
+    font-family: sans-serif;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#configOptions label::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 0.1em;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#configOptions label:hover{
+    background: #eee;
+}
+
+#configOptions input:checked + label::after {
+    opacity: 1;
+    transform: translate3d(0, -5px, 0);
+}
+
+.paramHolder{
+    width: 100%;
+    border-top: none;
+    display: flex;
+}
+
+.requestParameters{
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.paramHolder input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+    outline: none;
+}
+
+#addParam{
+    position: relative;
+    padding: 10px 0px 0px 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #555;
+    transition: all 0.3s;
+}
+
+#addParam::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 7%;
+    width: 90%;
+    height: 0.1em;
+    background-color: #555;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#addParam:hover{
+    color: black;
+}
+
+#addParam:hover::after {
+    opacity: 1;
+    transform: translate3d(0, -1px, 0);
+}

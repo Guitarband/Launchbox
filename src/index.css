@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.titlebar{
+    padding: 5px 10px;
+    background-color: lightgrey;
+}
+
+.app{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.navBar{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+
+.navBar button{
+    aspect-ratio: 1 / 1;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 15px;
+}
+
+.navBar button:hover{
+    background-color: lightgrey;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+}
+
+.restPage{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.restCreator{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.createRest{
+    width: 100%;
+    cursor: pointer;
+}
+
+.collectionHeader{
+    cursor: pointer;
+}
+
+.collectionHeader:hover{
+    background-color: grey;
+}
+
+.apiCollection{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.apiNameDir:hover{
+    background-color: grey;
+    cursor: pointer;
+    width: 100%;
+}
+
+.apiDescription{
+    flex: 5;
+    display: block;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+}
+
+.requestEditor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.responseJson{
+    display: flex;
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: transparent;
+    color: #2d2d2d;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.line-numbers{
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.responseHolder{
+    padding: 10px;
+}
